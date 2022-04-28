@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peterson's Algorithm Visualization</title>
+    <link rel="stylesheet" href="../CSS/peterson_algo_viz.css">
+    
+</head>
+
+<body>
+    <header class="header">
+        <!-- Left div/box for logo -->
+        <div class="left">
+            <img src="../Images/logo.png" alt="LOGO">
+        </div>
+
+        <!-- Center div/box for menu -->
+        <div class="center">
+            <ul class="navbar">
+                <li>
+                    <a href="index.html" class="active">Home</a>
+                </li>
+                <li>
+                    <a href="../HTML/concurrency_algo.html">Concurrency Algorithms</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    
+   
+    <div class="container">
+        <div class="box">
+            <h1>Entry State</h1>
+            <div class="xyz" id = 'entry_head'>Entry state:</div>
+            <button class="button" id='1' onclick="critical_state(this.id)">P1</button>
+            <button class="button" id='2' onclick=" critical_state(this.id)">P2</button>
+            <div class="text-center pl-4" id='entry'></div>
+        </div>
+        <div class="box">
+            <h1>Critical State</h1>
+            <div class="xyz" id = 'critical_head'>Critical state:</div>
+            <div class = 'text-center pl-4' id='critical'></div>
+        </div>
+        <div class="box">
+            <h1>Exit State</h1>
+            <div class="xyz" id = 'exit_head'>Exit state:</div>
+            <div class="text-center pl-4" id='exit'></div>
+        </div>
+        <div class="reset">
+            <button class="reset-button" onclick="window.location.reload()" >Reset</button>
+        </div>
+        
+        
+    </div>
+    
+    <script src = "../JS/peterson_algo_viz.js"></script>
+</body>
+
+</html>

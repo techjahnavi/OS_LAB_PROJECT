@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test & Set Lock Visualization</title>
+    <link rel="stylesheet" href="../CSS/tsl_viz.css">
+</head>
+
+<body>
+    <header class="header">
+        <!-- Left div/box for logo -->
+        <div class="left">
+            <img src="../Images/logo.png" alt="LOGO">
+        </div>
+
+        <!-- Center div/box for menu -->
+        <div class="center">
+            <ul class="navbar">
+                <li>
+                    <a href="index.html" class="active">Home</a>
+                </li>
+                <li>
+                    <a href="../HTML/concurrency_algo.html">Concurrency Algorithms</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+ 
+   
+
+    <div class="form-input" id='process_input'>
+        <h1>No. of Process:</h1>
+        <div class>
+            <input  type="number" min="0" id="process" placeholder="Number of process">
+            <span ></span>
+        </div>
+    </div>
+
+    <div>
+        <button class="reset-button" onclick = "start()">Submit </button>
+        <button class="reset1-button" onclick="window.location.reload()" >Reset</button>
+    </div> 
+    
+
+
+    <div class="container">
+        <div class="box">
+            <h1> Process(es)</h1>
+            <div class = 'button' id='added'></div>
+        </div>
+        <div  id = 'added_head'>Added state:</div>
+        <div class="box">
+            <h1>Entry State</h1>
+            <div class = 'button' id='entry'></div>
+        </div>
+        <div  id = 'entry_head'>Entry state:</div>
+        <div class="box">
+            <h1>Critical State</h1>
+            <div class = 'button' id='cs'></div>
+        </div>
+        <div  id = 'cs_head'>Cs State:</div>
+        
+        <div class="box"> 
+            <h1>Exit State</h1>
+            <div class = 'button' id='exit'></div>
+        </div>
+            
+         <div  id = 'exit_head'>Exit State:</div>
+       
+    </div>
+    <script src = "../JS/tsl_viz.js"></script>
+</body>
+
+</html>

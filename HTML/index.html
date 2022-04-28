@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concurrency And Deadlock</title>
+    <link rel="stylesheet" href="../CSS/home.css">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="../favicon_io/site.webmanifest">
+<!--     
+    Chatbot -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Bot</title>
+
+    <link rel="stylesheet" href="../CSS/chat.css">
+    <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <!-- Left div/box for logo -->
+        <div class="left">
+            <img src="../Images/logo.png" alt="LOGO">
+        </div>
+
+        <!-- Center div/box for menu -->
+        <div class="center">
+            <ul class="navbar">
+                <li>
+                    <a href="index.html" class="active">Home</a>
+                </li>
+                <li>
+                    <a href="contact_us.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+        <!-- Right div/box for buttons
+        <div class="right">
+            <button class="btn">
+                Call Us
+            </button>
+            <button class="btn">
+                Email Us
+            </button>
+        </div> -->
+    </header>
+
+    <div class="container">
+        <div class="box">
+            <h1>Concurrency</h1>
+            <p>Concurrency is the execution of multiple instruction sequences at the same time. It happens in the
+                operating system when several process threads are running in parallel. The running process threads
+                always communicate with each other through
+                shared memory or message passing. Concurrency requires sharing of resources resulting in problems like
+                deadlocks and resources starvation.
+            </p>
+            <a href="concurrency_info.html"><button class="p-btn">Information</button></a>
+            <a href="concurrency_algo.html"><button class="p-btn">Algorithms</button></a>
+        </div>
+        <div class="box">
+            <h1>Deadlock</h1>
+            <p>Deadlock is a situation where a set of processes are blocked because each process is holding a resource
+                and waiting for another resource acquired by some other process.
+            </p>
+            <a href="deadlock_info.html"><button class="p-btn">Information</button></a>
+            <a href="deadlock_algo.html"><button class="p-btn">Algorithms</button></a>
+        </div>
+    </div>
+    <div class="chat-bar-collapsible">
+        <button id="chat-button" type="button" class="collapsible">Chat with us!
+            <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
+        </button>
+
+        <div class="content">
+            <div class="full-chat-block">
+                <!-- Message Container -->
+                <div class="outer-container">
+                    <div class="chat-container">
+                        <!-- Messages -->
+                        <div id="chatbox">
+                            <h5 id="chat-timestamp"></h5>
+                            <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+                        </div>
+
+                        <!-- User input box -->
+                        <div class="chat-bar-input-block">
+                            <div id="userInput">
+                                <input id="textInput" class="input-box" type="text" name="msg"
+                                    placeholder="Tap 'Enter' to send a message">
+                                <p></p>
+                            </div>
+
+                            <div class="chat-bar-icons">
+                                <!-- <i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-heart"
+                                    onclick="heartButton()"></i> -->
+                                <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
+                                    onclick="sendButton()"></i>
+                            </div>
+                        </div>
+
+                        <div id="chat-bar-bottom">
+                            <p></p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../JS/responses.js"></script>
+<script src="../JS/chat.js"></script>
+
+</html>
